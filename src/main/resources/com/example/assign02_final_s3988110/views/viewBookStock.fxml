@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<VBox alignment="CENTER" spacing="20" prefHeight="600.0" prefWidth="900.0"
+      style="-fx-background-color: radial-gradient(radius 100%, #F2E8C6, #f1948a); -fx-background-radius: 10px;
+       -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);"
+      xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.assign02_final_s3988110.controllers.BookStockController"
+      stylesheets="@style.css">
+
+    <children>
+        <AnchorPane>
+            <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true"
+                       AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                <image>
+                    <Image url="@/com/example/assign02_final_s3988110/views/bookBliss.png"/>
+                </image>
+            </ImageView>
+            <Label alignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.leftAnchor="10.0" text="View Book Stock" styleClass="welcome-label"/>
+        </AnchorPane>
+        <!-- Table for displaying all books -->
+        <TableView fx:id="bookStockTable" prefHeight="500.0" prefWidth="800.0" styleClass="input-field">
+            <columns>
+                <TableColumn fx:id="bookTitleColumn" text="Book Title" prefWidth="310.0" styleClass="table-column-header"/>
+                <TableColumn fx:id="bookAuthorColumn" text="Author" prefWidth="150.0" styleClass="table-column-header"/>
+                <TableColumn fx:id="physicalCopiesColumn" text="Available Copies" prefWidth="180.0" styleClass="table-column-header"/>
+                <TableColumn fx:id="bookPriceColumn" text="Price" prefWidth="90.0" styleClass="table-column-header"/>
+                <TableColumn fx:id="soldCopiesColumn" text="Sold Copies" prefWidth="150.0" styleClass="table-column-header"/>
+            </columns>
+        </TableView>
+
+        <!-- Back Button -->
+        <Button text="Back to Dashboard" onAction="#handleBackToDashboard" styleClass="primary-button" />
+        <TextField fx:id="usernameField" visible="false" />
+        <HBox></HBox>
+    </children>
+</VBox>

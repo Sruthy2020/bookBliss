@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.Image?>
+<VBox alignment="CENTER" spacing="20" prefHeight="600.0" prefWidth="900.0"
+      style="-fx-background-color: radial-gradient(radius 100%, #F2E8C6, #f1948a);"
+      xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.assign02_final_s3988110.controllers.ExportOrderDetailsController"
+      stylesheets="@style.css">
+
+    <AnchorPane >
+        <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true"
+                   AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0">
+            <image>
+                <Image url="@/com/example/assign02_final_s3988110/views/bookBliss.png"/>
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.leftAnchor="10.0" text="Export Order Details" styleClass="welcome-label"/>
+    </AnchorPane>
+
+
+    <!-- Dropdown to select orders -->
+    <ComboBox fx:id="orderDropdown" prefWidth="300.0" promptText="Select Order" />
+    <Button text="Add Selected Order to export" onAction="#handleAddOrder" styleClass="primary-button" />
+
+
+    <!-- Table to display selected order items -->
+    <TableView fx:id="selectedOrdersTable" prefHeight="300.0" prefWidth="800.0" styleClass="input-field">
+        <columns>
+            <TableColumn fx:id="orderNumberColumn" text="Order No" prefWidth="180.0" styleClass="table-column-header"/>
+            <TableColumn fx:id="bookTitleColumn" text="Book Title" prefWidth="180.0" styleClass="table-column-header"/>
+            <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="120.0" styleClass="table-column-header"/>
+            <TableColumn fx:id="dateColumn" text="Date &amp; Time" prefWidth="170.0" styleClass="table-column-header"/>
+            <TableColumn fx:id="totalPriceColumn" text="Total Price" prefWidth="160.0" styleClass="table-column-header"/>
+            <TableColumn fx:id="decreaseQuantityColumn" text="-" prefWidth="50.0" styleClass="table-column-header"/>
+        </columns>
+    </TableView>
+
+    <!-- Buttons -->
+    <HBox alignment="CENTER" spacing="15">
+        <Button text="Export to CSV" onAction="#handleExport" styleClass="primary-button"/>
+        <Button text="Back to Dashboard" onAction="#handleBackButtonAction" styleClass="primary-button"/>
+    </HBox>
+    <TextField fx:id="usernameField" visible="false" />
+</VBox>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" spacing="20" prefHeight="600.0" prefWidth="900.0"
+      style="-fx-background-color: radial-gradient(radius 100%, #F2E8C6, #f1948a); -fx-background-radius: 10px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);"
+      xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.assign02_final_s3988110.controllers.DashboardController"
+      stylesheets="@style.css">
+
+   <children>
+      <AnchorPane>
+         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true"
+                     AnchorPane.leftAnchor="10.0">
+            <image>
+               <Image url="@/com/example/assign02_final_s3988110/views/bookBliss.png"/>
+            </image>
+         </ImageView>
+         <HBox spacing="10" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+               <Button text="Edit Profile" onAction="#navigateToEditProfile" styleClass="primary-button" />
+               <Button text="Delete Profile" onAction="#handleDeleteProfileButtonAction" styleClass="primary-button" />
+               <Button text="Log Out" onAction="#handleLogoutButtonAction" styleClass="primary-button" />
+               <ImageView fx:id="viewCartImage" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#handleViewCartClick">
+                  <image>
+                     <Image url="@/com/example/assign02_final_s3988110/views/shopping.png"/>
+                  </image>
+               </ImageView>
+
+            </children>
+         </HBox>
+      </AnchorPane>
+
+      <Label fx:id="welcomeLabel" text="" styleClass="welcome-label"/>
+
+
+      <!-- Top 5 Popular Books Label -->
+      <Label text="Top 5 Popular Books" styleClass="welcome-label"/>
+
+      <!-- Table View for popular books -->
+      <TableView fx:id="popularBooksListView" prefHeight="228.0" prefWidth="600.0" styleClass="input-field">
+         <columns>
+            <!-- Book Title Column -->
+            <TableColumn fx:id="bookTitleColumn" text="Book Title" prefWidth="480.0" styleClass="table-column-header"/>
+
+            <!-- Books Sold Column -->
+            <TableColumn fx:id="booksSoldColumn" text="Books Sold" prefWidth="370.0" styleClass="table-column-header"/>
+         </columns>
+      </TableView>
+
+
+      <!-- Bottom action buttons -->
+      <HBox alignment="CENTER" spacing="20">
+         <children>
+            <Button text="Add Shopping Cart" onAction="#navigateToShoppingCart" styleClass="primary-button" />
+            <Button text="View Orders" onAction="#navigateToOrderDetails" styleClass="primary-button" />
+         </children>
+      </HBox>
+      <HBox></HBox>
+
+   </children>
+</VBox>
+
+
+
+
+

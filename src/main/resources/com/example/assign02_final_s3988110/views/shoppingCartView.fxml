@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.Image?>
+<VBox alignment="CENTER" spacing="20" prefHeight="600.0" prefWidth="900.0"
+      style="-fx-background-color: radial-gradient(radius 100%, #F2E8C6, #f1948a); -fx-background-radius: 10px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);"
+      xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.assign02_final_s3988110.controllers.ShoppingCartController"
+      stylesheets="@style.css">
+
+   <children>
+      <AnchorPane >
+         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true"
+                    AnchorPane.leftAnchor="10.0">
+            <image>
+               <Image url="@/com/example/assign02_final_s3988110/views/bookBliss.png"/>
+            </image>
+         </ImageView>
+         <HBox spacing="10" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+               <TextField fx:id="usernameField" visible="false" />
+               <Label fx:id="totalAmountLabel" layoutX="200.0" layoutY="400.0" text="Total Amount: $" />
+
+               <Button text="Back" onAction="#handleBackButtonAction" styleClass="primary-button"/>
+               <Button text="Checkout" onAction="#handleCheckout" styleClass="primary-button"/>
+            </children>
+         </HBox>
+<!--         <Label alignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.leftAnchor="10.0" text="Shopping Cart" styleClass="welcome-label"/>-->
+      </AnchorPane>
+
+      <!-- Input Fields Grid -->
+      <GridPane hgap="10" vgap="15" alignment="CENTER">
+         <children>
+            <!-- Select Book -->
+            <Label text="Select Book" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <ComboBox fx:id="bookComboBox"  promptText="Select a book" styleClass="input-field" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+            <!-- Quantity Field -->
+            <Label text="Quantity" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <TextField fx:id="quantityField" promptText="Enter Quantity" styleClass="input-field" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+
+      <!-- Add to Cart Button -->
+      <HBox alignment="CENTER" spacing="15" styleClass="hbox">
+         <children>
+            <Button text="Add to Cart" onAction="#handleAddToCart" styleClass="primary-button"/>
+            <Button text="Clear Cart" onAction="#handleClearCart" styleClass="primary-button"/>
+         </children>
+      </HBox>
+
+      <TableView fx:id="cartTable" styleClass="input-field" prefHeight="400.0" prefWidth="600.0" >
+<!--                 styleClass="table-view">-->
+         <columns >
+
+            <TableColumn fx:id="bookTitleColumn" text="Book Title" prefWidth="420.0" styleClass="table-column-header"/>
+            <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="170.0" styleClass="table-column-header"/>
+            <TableColumn fx:id="totalPriceColumn" text="Total Price" prefWidth="170.0" styleClass="table-column-header"/>
+
+            <TableColumn fx:id="increaseQuantityColumn" text="+" prefWidth="50.0" styleClass="table-column-header"/>
+            <TableColumn fx:id="decreaseQuantityColumn" text="-" prefWidth="50.0" styleClass="table-column-header"/>
+         </columns>
+      </TableView>
+      <Label fx:id="errorMessageLabel" text="" styleClass="error-message" alignment="CENTER"/>
+
+   </children>
+</VBox>
+
+
+
+
+
+
+
+

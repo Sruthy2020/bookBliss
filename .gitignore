@@ -1,0 +1,26 @@
+### IntelliJ IDEA ###
+/.idea/*
+.idea/workspace.xml
+*.iws
+*.iml
+*.ipr
+lib
+/out/
+.DS_Store
+HELP.md
+*.class
+target/*
+.idea/*
+
+
+# Maven
+/.mvn/
+/.mvn/wrapper/maven-wrapper.jar
+
+# Environment files
+.env
+
+
+
+
+

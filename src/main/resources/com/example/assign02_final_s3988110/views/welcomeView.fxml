@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20" prefHeight="600.0" prefWidth="900.0"
+      style="-fx-background-color: radial-gradient(radius 100%, #F2E8C6, #f1948a); -fx-background-radius: 10px;
+             -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);"
+      xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.assign02_final_s3988110.controllers.WelcomeController"
+      stylesheets="@style.css">
+
+   <!-- AnchorPane for the logo in the top-left corner -->
+   <AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true"
+                 AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0">
+         <image>
+            <Image url="@/com/example/assign02_final_s3988110/views/bookBliss.png"/>
+         </image>
+      </ImageView>
+   </AnchorPane>
+   <HBox></HBox><HBox></HBox><HBox></HBox><HBox></HBox><HBox></HBox><HBox></HBox>
+
+   <!-- Main content centered -->
+   <children>
+      <Label alignment="CENTER" text="Welcome to BookBliss🤗" styleClass="welcome-label" />
+      <HBox alignment="CENTER" spacing="15">
+
+         <children>
+
+            <Button mnemonicParsing="false" text="Login" onAction="#handleLoginButtonAction" styleClass="primary-button"/>
+            <Button mnemonicParsing="false" text="Signup" onAction="#handleSignUpButtonAction" styleClass="primary-button"/>
+         </children>
+      </HBox>
+      <HBox></HBox><HBox></HBox><HBox></HBox><HBox></HBox><HBox></HBox><HBox></HBox>
+      <HBox></HBox><HBox></HBox><HBox></HBox><HBox></HBox><HBox></HBox><HBox></HBox>
+   </children>
+</VBox>
+
+
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+
+<!--<?import javafx.geometry.Pos?>-->
+<!--<?import javafx.geometry.Insets?>-->
+<!--<?import javafx.scene.control.Button?>-->
+<!--<?import javafx.scene.control.Label?>-->
+<!--<?import javafx.scene.layout.HBox?>-->
+<!--<?import javafx.scene.layout.VBox?>-->
+
+<!--<?import javafx.scene.image.ImageView?>-->
+<!--<?import javafx.scene.image.Image?>-->
+<!--<?import javafx.scene.layout.AnchorPane?>-->
+
+<!--<VBox alignment="CENTER" spacing="20" prefHeight="408.0" prefWidth="506.0"-->
+<!--      style="-fx-background-color: radial-gradient(radius 100%, #F2E8C6, #f1948a); -fx-background-radius: 10px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);"-->
+<!--      xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"-->
+<!--      fx:controller="com.example.assign02_final_s3988110.controllers.WelcomeController"-->
+<!--      stylesheets="@style.css">-->
+<!--   <HBox alignment="CENTER_LEFT" spacing="15">-->
+<!--   <children>-->
+<!--      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true"-->
+<!--                 AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0">-->
+<!--         <image>-->
+<!--            <Image url="@/com/example/assign02_final_s3988110/views/bookBliss.png"/>-->
+<!--         </image>-->
+<!--      </ImageView>-->
+<!--   </children>-->
+<!--   </HBox>-->
+<!--   <HBox>-->
+<!--      <children>-->
+
+<!--      </children>-->
+
+<!--   </HBox>-->
+
+<!--   <children>-->
+<!--      <Label alignment="CENTER" text="Welcome to BookBliss🤗" styleClass="welcome-label" />-->
+<!--      <HBox alignment="CENTER" spacing="15">-->
+<!--         <children>-->
+<!--            <Button mnemonicParsing="false" text="Login" onAction="#handleLoginButtonAction" styleClass="primary-button"/>-->
+<!--            <Button mnemonicParsing="false" text="Signup" onAction="#handleSignUpButtonAction" styleClass="primary-button"/>-->
+<!--         </children>-->
+<!--      </HBox>-->
+<!--   </children>-->
+<!--   <HBox>-->
+<!--   </HBox>-->
+<!--   <HBox>-->
+<!--   </HBox>-->
+<!--   <HBox>-->
+<!--   </HBox>-->
+<!--   <HBox>-->
+<!--   </HBox>-->
+<!--   <HBox>-->
+<!--   </HBox>-->
+<!--</VBox>-->
+
+
+
+
+
+
+
+
+
+

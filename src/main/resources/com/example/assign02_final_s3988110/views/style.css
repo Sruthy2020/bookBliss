@@ -1,0 +1,248 @@
+/* Root layout (VBox) */
+.vbox {
+    -fx-padding: 20;
+    -fx-background-color: radial-gradient(radius 100%, #F2E8C6, #f1948a);
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+.label {
+    -fx-font-size: 18px;
+}
+
+
+/* Welcome Label with hover animation */
+.welcome-label {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 28px;
+    -fx-text-fill: linear-gradient(#900C3F, #000000);
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 5, 5);
+    -fx-padding: 10;
+    -fx-transition: -fx-text-fill 0.5s ease-in-out, -fx-effect 0.5s ease-in-out;
+}
+
+/* Hover state for label */
+.welcome-label:hover {
+    -fx-text-fill: linear-gradient(#000000, #900C3F);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 12, 0, 6, 6);
+}
+
+/* Primary button styling */
+.primary-button {
+    -fx-background-color: linear-gradient(#900C3F, #000000);
+    -fx-border-color: black;
+    -fx-border-radius: 5px;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-transition: background-color 0.3s, scale 0.3s ease;
+}
+
+/* Hover effect for primary buttons */
+.primary-button:hover {
+    -fx-background-color: linear-gradient(#000000, #900C3F);
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Secondary button styling (for login link) */
+.secondary-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #0008ff;
+    -fx-font-size: 16px;
+    -fx-underline: true;
+}
+
+/* Input field styling */
+.input-field {
+    -fx-border-color: #cccccc;
+    -fx-font-size: 16px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-family: 'Arial';
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 2, 2);
+}
+/* Focused state for input fields */
+.input-field:focused {
+    -fx-border-color: #900C3F;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0, 2, 2);
+}
+
+/* General button container styling */
+.hbox {
+    -fx-spacing: 15;
+    -fx-alignment: center;
+}
+
+/* Tooltip styles */
+.tooltip {
+    -fx-background-color: #900C3F;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5px;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 2, 2);
+}
+
+/* Button shadow effect */
+.primary-button {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0, 2, 2);
+}
+
+/* Error message styling */
+.error-message {
+    -fx-font-size: 16px;
+    -fx-text-fill: red;
+    -fx-padding: 10px;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 5, 0, 0, 2);
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+/* Hover effect for error message */
+.error-message:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Shopping cart image hover effect */
+.image-view {
+    -fx-cursor: hand;
+}
+
+.image-view:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 2, 2);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* Basic Table styling */
+.table-view {
+    -fx-background-color: radial-gradient(radius 200%, #f1948a, #F2E8C6);
+    -fx-border-color: linear-gradient(#900C3F, #000000);
+    -fx-border-width: 3px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-table-cell-border-color: transparent;
+}
+
+/* Column header background */
+.table-view .column-header-background {
+    -fx-background-color: #900C3F;
+}
+
+/* Column header text */
+.table-view .table-column-header {
+    -fx-background-color: radial-gradient(radius 200%, #f1948a, #F2E8C6);
+    -fx-border-color: linear-gradient(#900C3F, #000000);
+    -fx-border-width: 3px;
+    -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}
+
+/* Row Styling */
+.table-view .table-row-cell {
+    -fx-padding: 10px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #333333;
+    -fx-alignment: center-left;
+}
+
+/* Hover effect for table rows */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #EAEAEA;
+    -fx-cursor: hand;
+}
+
+/* Table cell styling */
+.table-view .table-cell {
+    -fx-padding: 8px;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 13px;
+    -fx-text-fill: #333333;
+    -fx-alignment: center-left;
+}
+
+/* Empty table message */
+.table-view .placeholder {
+    -fx-font-size: 13px;
+    -fx-text-fill: #900C3F;
+    -fx-font-style: italic;
+    -fx-alignment: center;
+    -fx-padding: 20px;
+}
+
+/* ComboBox styling */
+.combo-box {
+    -fx-background-color: linear-gradient(#f2e8c6, #f1948a);
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-family: 'Arial';
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 2, 2);
+}
+
+/* Focused state for ComboBox */
+.combo-box:focused {
+    -fx-border-color: #900C3F;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0, 2, 2);
+}
+
+/* Hover effect for ComboBox */
+.combo-box:hover {
+    -fx-background-color: linear-gradient(#f1948a, #f2e8c6);
+}
+
+/* ComboBox dropdown styling */
+.combo-box-popup .list-view {
+    -fx-background-color: radial-gradient(radius 200%, #f1948a, #F2E8C6);
+    -fx-border-color: #900C3F;
+    -fx-border-radius: 5px;
+}
+
+/* List cell styling inside the ComboBox dropdown */
+.combo-box-popup .list-cell {
+    -fx-padding: 5px 10px;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* Hover effect for list cell items */
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #EAEAEA;
+    -fx-text-fill: #900C3F;
+}
+
+.total-price-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+
+.logo {
+    -fx-translate-x: 10;
+    -fx-translate-y: 10;
+    -fx-position: absolute;
+}
+
+
+
+
