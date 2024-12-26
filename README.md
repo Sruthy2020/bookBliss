@@ -59,3 +59,6 @@ User Account:
 * DAO/: Handles database operations for books, orders, and users.
 * controllers/: Manages GUI events and user interactions.
 * utils/: Helper classes for cart operations, validations, and CSV export functionality.
+
+**Folder Structure**
+* mvn javafx:run
